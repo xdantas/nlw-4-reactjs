@@ -1,0 +1,38 @@
+/* O .module.css serve para poder ser feita uma divisão
+do css do site em componentes, evitando a famosa aglomoração de css que
+acaba afetando projetos grandes */
+
+.experienceBar {
+    display: flex;
+    align-items: center;
+}
+
+.experienceBar span {
+    font-size: 1rem;
+}
+
+/* esse " > " significa que vai editar apenas o que está dentro do 
+primeiro nível de filhos da .experience-bar
+ou seja, apenas as divs filha dele */
+
+.experienceBar > div {
+    flex: 1;
+    height: 4px;
+    border-radius: 4px;
+    background: var(--gray-line);
+    margin: 0 1.5rem;
+    position: relative;
+}
+
+.experienceBar > div > div {
+    height: 4px;
+    border-radius: 4px;
+    background: var(--green);
+}
+
+/* O     transform: translateX(-50%);   puxou o elemento 50% para esquerda  */
+span.currentExperience {
+    position: absolute;
+    top: 12px;
+    transform: translateX(-50%);
+}
